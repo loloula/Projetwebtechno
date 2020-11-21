@@ -44,20 +44,33 @@
                                           <label for="exampleFormControlFile1">photo</label>
                                           <input type="file" class="form-control-file" id="photo">
                                          </div>
-                                         
+                                      </fieldset>
+                                      <fieldset>
+                                      <legend>coordonées GPS rendez-vous</legend>
+                                         <div>
+                                         <label for="exampleFormControlFile1">lattitude</label>
+                                         <input type="number" step=0.001 class="form-control-file" id="photo">
+                                        </div>
+                                        <div>
+                                        <label for="exampleFormControlFile1">longitude</label>
+                                        <input type="number" class="form-control-file" id="photo">
+                                       </div>
+
                                           <button type="submit" class="btn btn-primary">Submit</button>
 
                                     </fieldset>
                           </form>
                       </aside>
+                      <aside id="art2">
                       <div class="lire">
                         <input id="recup" type="search" name="param" placeholder="rechercher des annonces">
                         <button id="bouton_liste" type="submit" class="btn btn-primary mb-2" >afficher les annonces</button>
                       </div>
-                        <div  id="liste_annonces">
 
-                        </div>
+                  </aside>
+                  <aside  id="liste_annonces">
 
+                  </aside>
                   </article>
 
                 </main>
