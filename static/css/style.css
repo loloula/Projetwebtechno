@@ -1,1 +1,96 @@
+#titr{
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+}
+header.page-header {
+  background-color: #f0f4ef
+;
+  height: 100px;
+}
+#logo{
+  height: 50px;
+  width: 100px;
+}
+#na{
 
+  background-image: url("../../img/leaves.jpeg");
+  height: 50px;
+}
+
+a{
+  color: white;
+}
+li{
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  border-right: 1px;
+}
+ul{
+  text-align: center;
+}
+#pieds {
+  text-align: center;
+  text-decoration:underline;
+  color: red;
+}
+#art1{
+  width: 600px;
+  float: left;
+  /*background-color: red;*/
+  height: 500px;
+}
+#art2{
+  margin-top: 50px;
+  width: 920px;
+  margin-left: 600px;
+
+  height: 500px;
+
+}
+
+#pp{
+  text-align: center;
+  color: #8ea887;
+  font-size: 50px;
+}
+#entete {
+	position: relative;
+}
+.logo_left {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 7%;
+}
+.logo_right {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 7%;
+}
+#title {
+	font-size: 3em;
+	color: black;
+    text-align: center;
+
+}
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+}
+img{
+  width: 100px;
+}
+footer{
+  margin-bottom: 0px;
+}
+.lire{
+  height: 370px;
+
+}
+footer{position: sticky;}
