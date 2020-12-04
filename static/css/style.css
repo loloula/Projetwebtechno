@@ -4,10 +4,12 @@
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-family: Helvetica, Arial, sans-serif;
 }
+
+
 header.page-header {
   background-color: #f0f4ef
 ;
-  height: 100px;
+
 }
 #logo{
   height: 50px;
@@ -16,7 +18,7 @@ header.page-header {
 #na{
 
   background-image: url("../../img/leaves.jpeg");
-  height: 50px;
+
 }
 
 a{
@@ -42,15 +44,18 @@ ul{
   width: 600px;
   float: left;
   /*background-color: red;*/
-  height: 500px;
+  height: 550px;
 }
 #art2{
   margin-top: 50px;
   width: 920px;
   margin-left: 600px;
 
-  height: 500px;
+  height: 550px;
 
+}
+#mai{
+  height: 100%;
 }
 
 #pp{
@@ -61,22 +66,11 @@ ul{
 #entete {
 	position: relative;
 }
-.logo_left {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 7%;
-}
-.logo_right {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 7%;
-}
+
 #title {
 	font-size: 3em;
 	color: black;
-    text-align: center;
+  text-align: center;
 
 }
 button, input, select, textarea {
@@ -86,11 +80,22 @@ button, input, select, textarea {
 img{
   width: 100px;
 }
-footer{
-  margin-bottom: 0px;
-}
 .lire{
   height: 370px;
-
 }
-footer{position: sticky;}
+#recup{
+  margin-top: 200px;static;
+}
+form #ajout_annonce{
+  margin-left: 70px;
+}
+#retour{
+  width: 100%;
+}
+{retour1{
+  width: 70%;
+}
+#retour2{
+  margin-left: 70%;
+  width: 30%;
+}
