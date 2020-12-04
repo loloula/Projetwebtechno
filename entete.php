@@ -10,10 +10,13 @@
         </ul>
 
       </nav>
-      <div id="entete">
-            <div id="title"> Titre de l'application </div>
+      <div id="title" style="margin-right:1000px;margin-top:100px;"> Titre de l'application </div>
+      <form id="connect" method="post" style="margin-left:1000px;margin-bottom : -50px;">
 
+          <input style="color:black;" type="email" name ="email" placeholder=" email ">
 
+          <input style="color:black;" type="password" name="motdepasse" placeholder="mot de passe"/>
 
-        </div>
+          <input style="color:black;" type="submit" name"submit" value="connexion" />
+      </form>
 </header>

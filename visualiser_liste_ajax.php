@@ -29,34 +29,35 @@
                 <main id="mai">
                   <article class="">
                       <aside id="art1">
-                        <form action="#">
+                        <form id="ajout_annonce" style="margin-left:50px;" enctype="multipart/form-data" method="post">
                                     <p><i>Complétez le formulaire pour ajouter de nouvelle annonces Les champs marqué par </i><em>*</em> sont <em>obligatoires</em></p>
                                     <fieldset>
-                                         <div class="form-group">
-                                            <label for="Titre">Titre</label>
-                                            <input type="text" class="form-control" id="titre"  placeholder="titre">
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="description">description</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="description"></textarea>
-                                          </div>
-                                          <div>
-                                          <label for="exampleFormControlFile1">photo</label>
-                                          <input type="file" class="form-control-file" id="photo">
-                                         </div>
+                                            <label for="Titre">Titre*</label>
+                                            <input type="text" class="form-control" name="titre"  placeholder="titre" >
+                                            <label for="description">description*</label>
+                                            <textarea class="form-control" name="description" placeholder="description" ></textarea>
+                                            <label for="categorie">Catégorie*</label>
+                                            <input type="text" class="form-control" name="categorie"  placeholder="Catégorie" >
+                                            <label for="pseudo">pseudo*</label>
+                                            <input class="form-control" name="pseudo" placeholder="pseudo" ></input>
+                                            <label for="exampleFormControlFile1">prix*</label>
+                                            <input type="number" step=0.001  name="prix" ><br>
+                                          <label for="exampleFormControlFile1">photo*</label>
+                                          <input type="text" class="form-control-file" name="photo" >
+
                                       </fieldset>
                                       <fieldset>
                                       <legend>coordonées GPS rendez-vous</legend>
-                                         <div>
-                                         <label for="exampleFormControlFile1">lattitude</label>
-                                         <input type="number" step=0.001 class="form-control-file" id="photo">
-                                        </div>
-                                        <div>
-                                        <label for="exampleFormControlFile1">longitude</label>
-                                        <input type="number" class="form-control-file" id="photo">
-                                       </div>
 
-                                          <button type="submit" class="btn btn-primary">Submit</button>
+                                         <label for="exampleFormControlFile1">lattitude*</label>
+                                         <input type="number" step=0.001  name="lat" >
+
+
+                                        <label for="exampleFormControlFile1">longitude*</label>
+                                        <input type="number" class="form-control-file" name="lon" >
+
+
+                                          <input type="submit"  value="Ajouter">
 
                                     </fieldset>
                           </form>
@@ -67,14 +68,14 @@
                         <button id="bouton_liste" type="submit" class="btn btn-primary mb-2" >afficher les annonces</button>
                       </div>
 
-                  </aside>
-                  <aside  id="liste_annonces">
+                     </aside>
 
-                  </aside>
-                  </article>
+                    </article>
 
                 </main>
+                <div  id="liste_annonces">
 
+                </div>
                     <!-- inclure l'entete de la page -->
                 <?php include("pied.php"); ?>
       </div>
