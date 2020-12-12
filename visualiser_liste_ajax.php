@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,6 +6,8 @@
     <title>mes annonces</title>
     <link rel="stylesheet" type="text/css" href="static/css/style.css"></link>
     <script type="text/javascript" src="static/js/annonce.js"></script>
+    <script type="text/javascript" src="static/js/annonce1.js"></script>
+    <script type="text/javascript" src="static/js/annonce2.js"></script>
     <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
 
     <!-- Theme CSS -->
@@ -29,7 +32,7 @@
                 <main id="mai">
                   <article class="">
                       <aside id="art1">
-                        <form id="ajout_annonce" style="margin-left:50px;" enctype="multipart/form-data" method="post">
+                        <form id="ajout_annonce" style="margin-left:50px;margin-top:50px;" enctype="multipart/form-data" method="post">
                                     <p><i>Complétez le formulaire pour ajouter de nouvelle annonces Les champs marqué par </i><em>*</em> sont <em>obligatoires</em></p>
                                     <fieldset>
                                             <label for="Titre">Titre*</label>

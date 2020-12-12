@@ -5,6 +5,8 @@
     <title>mes annonces</title>
     <link rel="stylesheet" type="text/css" href="static/css/style.css"></link>
     <script type="text/javascript" src="static/js/annonce.js"></script>
+    <script type="text/javascript" src="static/js/annonce1.js"></script>
+    <script type="text/javascript" src="static/js/annonce2.js"></script>
     <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
 
     <!-- Theme CSS -->
@@ -27,7 +29,7 @@
             <div>
                     <!-- inclure l'entete de la page -->
                     <?php include("entete.php"); ?>
-                    <main id="mai">
+                    <main id="mai" style="margin-top:130px">
                       <?php
                       //ipmoortation de la base de donnee
                       include("bdd.php");
