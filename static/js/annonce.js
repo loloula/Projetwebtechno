@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const requeteHTTPGet = new XMLHttpRequest();
   requeteHTTPGet.addEventListener("load", (evt) => {
   const jsonData = evt.target.responseText;
-                    // console.log("résultat du webservice reçu", jsonData);
+  // console.log("résultat du webservice reçu", jsonData);
   const data = JSON.parse(jsonData);
-                    // console.log("données décodées", data);
+  // console.log("données décodées", data);
 
   for (const annonce of data) {
           emp.innerHTML +=' <div ><h5>'+annonce.titre+'</h5>'+
@@ -32,10 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
   for (const monbuton of supprim){
     const idannonce = monbuton.dataset.idannonce;
     monbuton.addEventListener("click", (evt) => {
-        console.log(idannonce);
+      if (window.confirm("Sure to delete ?")){
         const requeteHTTPGet = new XMLHttpRequest();
+        requeteHTTPGet.addEventListener("load", (evt) => {
+       //on charge le retour
+        if(requeteHTTPGet.status==401){
+        //rafraissir la page
+        //window.location.reload();
+        window.alert("vous n'avez pas le droit supprimer veuillez vous connecter");
+        }
+        //else{
+        //  window.confirm(message);
+        //}
+      });
         requeteHTTPGet.open("get", "ws_supprimer_annonce.php?id="+idannonce);
         requeteHTTPGet.send();
+      }
+
     });
 
   };
@@ -46,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
   requeteHTTPGet.send();
 
   });
-
     //fin script affiche annonces
     //debut script ajout d'une annonce
     //pointer le formulaire de par son id
@@ -57,6 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
            const donneesenvoyer = new FormData(formajoutannonce);
            //appeler le web service
            requeteHTTPPost.open("post", "ws_ajout_annonces.php");
+           requeteHTTPPost.addEventListener("load", (evt) => {
+          //on charge le retour
+           if(requeteHTTPPost.status==200){
+           //rafraissir la page
+           window.location.reload();
+         }
+       });
            requeteHTTPPost.send(donneesenvoyer);
            event.preventDefault();
  });
