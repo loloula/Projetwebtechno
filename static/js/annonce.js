@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // console.log("données décodées", data);
 
   for (const annonce of data) {
-          emp.innerHTML +=' <div ><h5>'+annonce.titre+'</h5>'+
+          emp.innerHTML +=' <div id="supprime'+annonce.id+'"><h5>'+annonce.titre+'</h5>'+
           '<br> <a href="#">description </a>: '+annonce.description+
           '<br><a href="#"> catégorie</a> : '+annonce.categorie+
           '<br><a href="#"> pseudo </a>: '+annonce.pseudo+
@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
   //console.log(supprim); teste
   for (const monbuton of supprim){
     const idannonce = monbuton.dataset.idannonce;
+    const divis= document.getElementById('supprime'+idannonce);
+    console.log(getComputedStyle(divis).display);
     monbuton.addEventListener("click", (evt) => {
       if (window.confirm("Sure to delete ?")){
         const requeteHTTPGet = new XMLHttpRequest();
@@ -41,9 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
         //window.location.reload();
         window.alert("vous n'avez pas le droit supprimer veuillez vous connecter");
         }
-        //else{
-        //  window.confirm(message);
-        //}
+        else{
+          if(getComputedStyle(divis).display != "none"){
+            divis.style.display = "none";
+            monbuton.style.display="none";
+          }
+        }
       });
         requeteHTTPGet.open("get", "ws_supprimer_annonce.php?id="+idannonce);
         requeteHTTPGet.send();
