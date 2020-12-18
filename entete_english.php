@@ -16,11 +16,11 @@ session_start();
             if(!empty($_SESSION['login']))
             {
                 echo '<div style="align:center">
-                <p style="color:#242830">bienvenue ',$_SESSION['login'] ,'<button id="deconnecte" style="color:black;" type="submit"   >log out</button></p> </div>' ;
+                <p style="color:#242830;margin-left:1000px;">bienvenue ',$_SESSION['login'] ,'<button id="deconnecte" style="color:black;" type="submit"   >log out</button></p> </div>' ;
             }
             else{
               echo '
-                  <form id="connect" method="post" style="margin-left:1000px;">
+                  <form id="connect" method="post" style="margin-left:990px;">
                   <input style="color:black;" type="email" name ="adressemail" placeholder=" e-mail ">
                   <input style="color:black;" type="password" name="motdepasse" placeholder="password">
                   <input  type="submit" style="color:black;" value="log in"></form>';
