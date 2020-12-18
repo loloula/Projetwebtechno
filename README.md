@@ -1,4 +1,6 @@
 # Projetwebtechno
+# certains pages sont traduites en anglais 
+# trois fichier javascript annonce.js  & annonce1.js & annonce2.js
 # entete.php: 
 #       c'est l'entete des pages avec le navbar
 # pied.php: 
