@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 //  console.log("page");
-  //pointer vers le bouton de deconnexion
+//pointer vers le bouton de deconnexion
 
 const leBouton = document.getElementById("deconnecte");
 leBouton.addEventListener("click", (evt) => {
-  //console.log("fafafafaf");teste
+
   const requeteHTTPGet = new XMLHttpRequest();
   requeteHTTPGet.addEventListener("load", (evt) => {
  //on charge le retour

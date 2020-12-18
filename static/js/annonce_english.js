@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // console.log("données décodées", data);
 
   for (const annonce of data) {
-          emp.innerHTML +=' <div id="supprime'+annonce.id+'", style="margin-bottom: 10px;"><h5>'+annonce.titre+'</h5>'+
+          emp.innerHTML +=' <div id="supprime'+annonce.id+'", style="margin-bottom:10px;"><h5>'+annonce.titre+'</h5>'+
           '<br> <a href="#">description </a>: '+annonce.description+
           '<br><a href="#"> catégorie</a> : '+annonce.categorie+
           '<br><a href="#"> pseudo </a>: '+annonce.pseudo+
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
           '<br><a href="#"> rdv_lat </a>: '+annonce.rdv_lat+
           '<br><a href="#"> rdv_lon </a>: '+annonce.rdv_lon+
           '<br><a href="#"> date </a>: '+annonce.date+'</div> ';
-          emp.innerHTML += '<div> <button type="submit" class="supprimer btn btn-primary mb-2" , style="margin-bottom: 115px;" data-idannonce='+annonce.id+'>supprimer</button></div>';
+          emp.innerHTML += '<div> <button type="submit" class="supprimer btn btn-primary mb-2" , style="margin-bottom: 115px;" data-idannonce='+annonce.id+'>delete</button></div>';
 
   };
   const supprim = document.getElementsByClassName("supprimer");
@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const divis= document.getElementById('supprime'+idannonce);
     console.log(getComputedStyle(divis).display);
     monbuton.addEventListener("click", (evt) => {
-      if (window.confirm("Êtes-vous sûr(e) de vouloir supprimer?")){
+      if (window.confirm("Sure to delete ?")){
         const requeteHTTPGet = new XMLHttpRequest();
         requeteHTTPGet.addEventListener("load", (evt) => {
        //on charge le retour
         if(requeteHTTPGet.status==401){
         //rafraissir la page
         //window.location.reload();
-        window.alert("Vous n'avez pas le droit supprimer. Veuillez vous connecter.");        
+        window.alert("You cannot delete this ad. Please log in first.");
         }
         else{
           if(getComputedStyle(divis).display != "none"){
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   });
-                //recuperer les données du webservices avec comme parametre le texte recuperer sur la zone de saisi
+  //recuperer les données du webservices avec comme parametre le texte recuperer sur la zone de saisi
   requeteHTTPGet.open("get", "ws_liste_annonces.php?param="+recu);
   requeteHTTPGet.send();
 
