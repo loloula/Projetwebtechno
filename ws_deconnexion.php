@@ -1,5 +1,5 @@
 <?php
-// On prolonge la session
+//on prolonge la session
 session_start();
 //detruire la session
 session_destroy();

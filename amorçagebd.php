@@ -1,5 +1,5 @@
 <?php
-include("bdauthentif.php");
+include("bdd.php");
 creationTable();
 insertionDonneesExemple();
  ?>

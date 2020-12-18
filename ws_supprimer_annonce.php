@@ -2,8 +2,7 @@
 session_start();
 if(empty($_SESSION['login']))
 {
-    http_response_code(401);
-
+ http_response_code(401);
 }
 else {
   //importation de la base de donnee
@@ -18,5 +17,4 @@ else {
   $rst = $pdo->query($requeteSQL);
   http_response_code(200);
 }
-
 ?>
